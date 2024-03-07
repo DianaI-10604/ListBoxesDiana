@@ -1,0 +1,22 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="500"
+        x:Class="AvaloniaApplication1.NamesOutput"
+        Title="NamesOutput"
+		Width="400"
+		Height="500">
+	<Grid RowDefinitions="*, 6*" ShowGridLines="True">
+		<Label Content="Names"
+			   HorizontalAlignment="Center"
+			   FontSize="20"
+			   Grid.Row="0"
+			   Margin="0 20 0 0"/>
+		<ListBox Grid.Row="1"
+				 Name="SelectedNames"
+					Width=""
+					Margin="20">
+		</ListBox>
+	</Grid>
+</Window>

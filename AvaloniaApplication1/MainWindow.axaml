@@ -1,0 +1,64 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="400"
+		Height="400"
+		Width="500"
+        x:Class="BundingPageDiana.MainWindow"
+        Title="InputNames"
+		Background="Transparent">
+	<Border CornerRadius="10" Background="White">
+		<Grid ShowGridLines="False" RowDefinitions="*, 2.1*, *" ColumnDefinitions="*, *">
+			<StackPanel Grid.Row="0" Grid.Column="0">
+				<TextBox Name="firstname" Margin="-50 30 0 0"
+						 Width="150"
+						 Watermark="First Name"/>
+			</StackPanel>
+
+			<StackPanel Grid.Row="0" Grid.Column="1">
+				<TextBox Name="lastname"
+						 Margin="-200 30 0 0"
+						 Width="150"
+						 Watermark="Last Name"/>
+			</StackPanel>
+
+			<StackPanel Grid.Row="2" Grid.Column="0">
+				<Button Click="ShowInfo"
+						HorizontalAlignment="Left"
+						Margin="20 10 0 0"
+						Width="115"
+						Height="30"
+						Content="Показать имя"/>
+
+				<Button Click="ClearTextBoxes"
+						HorizontalAlignment="Left"
+						Margin="20 10 0 0"
+						Width="115"
+						Height="30"
+						Content="Очистить"/>
+			</StackPanel>
+
+			<Label Grid.Column="0"
+				   Grid.Row="1"
+				   Content="Пользователи:"
+				   Margin="25 0 0 0"/>
+			<ListBox Name="EnteredNames"
+					 Grid.Row="1"
+					 Grid.Column="0"
+					 Grid.ColumnSpan="2"
+					 Margin="25">
+			</ListBox>
+
+			<StackPanel Grid.Row="2"
+						Grid.Column="0"
+						Grid.ColumnSpan="2">
+				<Button Margin="200 10 0 0"
+						Width="180"
+						Height="30"
+						Content="Показать в новом окне"
+						Click="NextPage"/>
+			</StackPanel>
+		</Grid>
+	</Border>
+</Window>
